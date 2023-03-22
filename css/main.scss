@@ -1,0 +1,139 @@
+@import 'reset';
+@import 'settings';
+
+body {
+    font-family: $font;
+}
+
+.content-wrapper {
+    /* width: 100%; */
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+
+    @media screen and (max-width: 768px) {
+        padding: 50px;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .lenses {
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        @media screen and (max-width: 768px) {
+            padding: 50px;
+            gap: 20px;
+        }
+
+        .lenses-img {
+            width: 150px;
+
+            @media screen and (max-width: 768px) {
+                width: 70px;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                width: 200px;
+
+                @media screen and (max-width: 768px) {
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .oops {
+        width: 70%;
+        padding: 50px;
+        position: relative;
+        /* display: flex;
+        align-items: flex-end; */
+
+        .oops-img {
+            width: 350px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media screen and (max-width: 768px) {
+                width: 200px;
+            }
+
+            img {
+                width: 100%;
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        p {
+            width: 100%;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            font-weight: 700;
+            color: $text-color;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                font-size: 24px;
+            }
+        }
+    }
+
+    a {
+        margin-top: 30px;
+        padding: 12px 28px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        border-radius: 7px;
+        background-color: $button-color;
+        color: $text-color;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        gap: 10px;
+        cursor: pointer;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        &:hover {
+            background-color: $button-hover-color;
+        }
+
+        span {
+            font-size: 26px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
